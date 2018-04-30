@@ -1,13 +1,18 @@
-body {
-    background-color: powderblue;
+body{
+    background-color: rgb(61, 61, 61);
+    color: white;
 }
-
-img{
-    width:50%;
-}
-
-.row-4{
-    border: solid gray;
+#ProgramLog{
+    border: 1px solid gray;
+    height: 100;
     color: black;
-    
+    overflow-y: scroll; 
+    max-height:160px;
+}
+.list-group-item{
+    background-color: rgb(73, 73, 73);
+    width: 405px;
+    min-height: 50px;
+    overflow:hidden;
+    display:table;
 }

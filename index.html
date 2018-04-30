@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-
-    <title>Hello World!</title>
     <script src="renderer.js" type="text/javascript"></script>
     <!--to reference Bootstrap-->
-    <link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="CustomStyleSheet.css">
 
 </head>
@@ -15,33 +13,56 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-6" id="PlayerSelection">
-                    <img class=" row-4 thumbnail" onClick="RunGame('rock')" src="./images/rock.jpg">
-                    <img class=" row-4 thumbnail" onClick="RunGame('paper')" src="./images/paper.jpg">
-                    <img class=" row-4 thumbnail" onClick="RunGame('scissors')" src="./images/scissors.jpg">
-                <!--
-                <div class="row-4">
-                    <img class=" thumbnail" onClick="yolo()" src="./images/rock.jpg">
-                </div>
-                <div class="row-4">
-                    <img class=" thumbnail" onClick="yolo()" src="./images/paper.jpg">
-
-                </div>
-                <div class="row-4">
-                    <img class="thumbnail" onClick="yolo()" src="./images/scissors.jpg">
-
-                </div>
--->
-
-
-
+            <div class="col-12 text-center font-weight-bold">CLICK TO FIGHT</div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img class="img-thumbnail" onClick="RunGame('rock')" src="./images/rock.jpg">
             </div>
-            <div class="col-6" id="CPUSelection">
-
+            <div class="col-4">
+                <img class="img-thumbnail" onClick="RunGame('paper')" src="./images/paper.jpg">
             </div>
-
+            <div class="col-4">
+                <img class="img-thumbnail" onClick="RunGame('scissors')" src="./images/scissors.jpg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 text-center font-weight-bold">
+                        <u>SCORE:</u>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-right">
+                        <u>PLAYER</u>
+                    </div>
+                    <div class="col-6 text-left">
+                        <u>CPU</u>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-right" id="txtPlayerScore">0</div>
+                    <div class="col-6 text-left" id="txtCPUScore">0</div>
+                </div>
+            </div>
 
         </div>
+        <div class="row">
+            <div class="col-12 text-center font-weight-bold">
+                <u>RESULT LOG:</u>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-2">
+                <div class="col-12  text-center panel panel-primary">
+                    <div class="panel-body">
+                        <ul class="list-group" id="ProgramLog"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

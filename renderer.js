@@ -1,4 +1,3 @@
-
 function RunGame(Selection) {
 
     //select an option for computer
@@ -7,11 +6,38 @@ function RunGame(Selection) {
     //compare outcomes
     var TheWinner = CompareSelections(Selection, CPUSelection);
 
+    //update score
+    UpdateTheScore(TheWinner);
 
-    //declare winner
+    //display the log
+    DisplayOutput(Selection,CPUSelection,TheWinner);
+}
 
+function DisplayOutput(Player, CPU, Winner)
+{
+    if(Winner == 'tie')
+    {
+        document.getElementById("ProgramLog").innerHTML +=  "<li class=\"list-group-item\">" + "You both chose " + Player.toUpperCase() + "! its a TIE!" +  "</li>";
+    }
+    else
+    {
+        document.getElementById("ProgramLog").innerHTML +=  "<li class=\"list-group-item\">" + "You chose: " +Player+ " CPU chose: " + CPU + "Winner is: " + Winner + "</li>";
+    }
 
-    alert('Selection: ' + Selection + '\tCPU: ' + CPUSelection + "\tWinner= " + TheWinner);
+    document.getElementById("ProgramLog").scrollTop(160);
+}
+
+function UpdateTheScore(TheWinner)
+{
+    if(TheWinner == 'player')
+    {
+        document.getElementById("txtPlayerScore").innerHTML = parseInt(document.getElementById("txtPlayerScore").innerText)+1;
+
+    }
+    else if(TheWinner == 'cpu')
+    {
+        document.getElementById("txtCPUScore").innerHTML = parseInt(document.getElementById("txtCPUScore").innerText)+1;
+    }
 }
 
 function CompareSelections(Player, CPU) {
