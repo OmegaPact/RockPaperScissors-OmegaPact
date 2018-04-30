@@ -3,6 +3,14 @@
     "version": "0.1.0",
     "main": "main.js",
     "scripts": {
-      "start": "electron ."
+        "start": "electron .",
+        "dist": "build"
+    },
+    "build": {
+        "appId": "com.test.testyapp",
+        "win": {
+            "target": "nsis",
+            "icon": "./images/rps_ico.ico"
+        }
     }
-  }
+}

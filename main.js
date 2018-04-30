@@ -12,7 +12,8 @@ function createWindow() {
         width: 500,
         height: 500,
         center: true,
-        resizable: false
+        resizable: false,
+        icon: path.join(__dirname, './images/rps_ico.ico')
     })
 
     // and load the index.html of the app.
